@@ -70,6 +70,29 @@
               z-index: -1;
               transition: all 0.25s ease;
           }
+
+          /*css btn3*/
+
+          .btn3:hover::after {
+              width: 100%;
+          }
+          .btn3::after {
+              content: "";
+              position: absolute;
+              border-radius: inherit;
+              width: 10%;
+              height: 5px;
+              background: #000;
+              left: 0;
+              bottom: 0;
+              z-index: -1;
+              transition: all 0.25s ease;
+              left: 50%;
+              transform: translateX(-50%);
+          }
+
+         
+              
     </style>
 </head>
 <body>
@@ -77,5 +100,6 @@
 
     <button class="btn1">btn1</button>
     <button class="btn2">btn2</button>
+    <button class="btn3">btn3</button>
 </body>
 </html>
