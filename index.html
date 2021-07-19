@@ -91,8 +91,38 @@
               transform: translateX(-50%);
           }
 
-         
-              
+         /*css btn4*/
+
+         .btn4{
+             color: #fff;
+             overflow: hidden;
+             border-radius: 30px;
+             box-shadow: 0px -0px 0px 0px rgba(143, 64, 248, 0.5), 
+             0px 0px 0px 0px rgba(39, 200, 255, 0.5) ;
+         }
+         .btn4:hover {
+             transform: translate(0, -6px);
+             box-shadow: 10px -10px 25px 0px rgba(143, 64, 248, 0.5), 
+             -10px 10px 25px 0px rgba(39, 200, 255, 0.5) ;
+         }
+         .btn4:hover::after {
+             transform: rotate(150deg);
+         }
+         .btn4::after  {
+             content: "";
+             width: 400px;
+             height: 400px;
+             position: absolute;
+             top: -50px;
+             left: -100px;
+             background-color: #ff3cac;
+             background-image: linear-gradient(225deg, #27d86c 0%, 
+             #26caf8 50%, #c625d0 100%);
+             z-index: -1;
+             transition: all 0.25s ease;
+         }
+          
+        
     </style>
 </head>
 <body>
@@ -101,5 +131,7 @@
     <button class="btn1">btn1</button>
     <button class="btn2">btn2</button>
     <button class="btn3">btn3</button>
+    <button class="btn4">btn4</button>
+    
 </body>
 </html>
