@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+          button{
+             padding: 20px 50px;  /*20px บน ล่าง ซ้ายขวา 50px*/
+             font-size: 1.5rem;
+             cursor: pointer;   
+             border: 0px;   /*ลบ border*/
+             background: transparent; /*background โปร่งใส*/
+             position: relative;
+             margin: 20px;
+             transition: all 0.25s ease;
+          }
+
+          .btn1{
+             background: #000;
+             color: #fff;
+             border-radius: 30px;
+             transition: all 0.25s ease;
+             position: relative;
+          }
+          .btn1:hover{    /*layer 1*/
+             transform: translate(-12px, -12px);
+          }
+
+          .btn1:hover::before{    /*layer 2*/
+             transform: translate(12px, 12px);
+          }
+
+          .btn1:hover::after{    /*layer 3*/
+             transform: translate(6px, 6px);
+          }
+          .btn1:hover::after, .btn1:hover::before {
+              content: "";
+              position: absolute;
+              opacity: 0.3;
+              border-radius: inherit;
+              background: #000;
+              width: 100%;
+              height: 100%;
+              left: 0;
+              bottom: 0;
+              z-index: -1;
+              transition: all 0.25s ease;
+          }
+    </style>
+</head>
+<body>
+    
+
+    <button class="btn1">btn1</button>
+</body>
+</html>
